@@ -1,0 +1,31 @@
+models:
+  - name: fakestoreapi_products
+    columns:
+      - name: id
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: category_numeric
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: product_description_length
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: title_length
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: rating_count
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: rating_rate
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: target_price_usd
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false 

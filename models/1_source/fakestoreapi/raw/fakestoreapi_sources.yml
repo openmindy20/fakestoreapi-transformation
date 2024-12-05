@@ -1,0 +1,44 @@
+sources:
+  - name: source_fakestoreapi__raw
+    loader: Copy Into Statement from S3
+    database: source_fakestoreapi
+    schema: raw
+    description: >
+      This dbt sources contains the RAW data ingested from fakestoreapi.com
+
+    tables:
+      - name: products
+        description: This table contains list of all products in the fakestoreapi.com
+        columns:
+          - name: id
+            meta:
+              contains_pii: false
+              contains_user_generated_data: false
+          - name: category
+            meta:
+              contains_pii: false
+              contains_user_generated_data: false
+          - name: description
+            meta:
+              contains_pii: false
+              contains_user_generated_data: true
+          - name: image
+            meta:
+              contains_pii: false
+              contains_user_generated_data: true
+          - name: title
+            meta:
+              contains_pii: false
+              contains_user_generated_data: true
+          - name: rating_count
+            meta:
+              contains_pii: false
+              contains_user_generated_data: false
+          - name: rating_rate
+            meta:
+              contains_pii: false
+              contains_user_generated_data: false
+          - name: price
+            meta:
+              contains_pii: false
+              contains_user_generated_data: false

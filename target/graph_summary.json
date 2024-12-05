@@ -1,0 +1,1 @@
+{"_invocation_id": "54667da8-4784-4bda-9569-fd9248cee2b6", "linked": {"0": {"name": "source.fakestoreapi_transformation.source_fakestoreapi__raw.products", "type": "source", "succ": [2]}, "1": {"name": "model.fakestoreapi_transformation.fakestoreapi_products", "type": "model"}, "2": {"name": "model.fakestoreapi_transformation.stg_products", "type": "model", "succ": [1]}}}

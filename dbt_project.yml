@@ -1,0 +1,30 @@
+name: 'fakestoreapi_transformation'
+version: '1.0.0'
+config-version: 2
+profile: 'fakestoreapi_transformation'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  fakestoreapi_transformation:
+    +materialized: table
+    # Config indicated by + and applies to all files under models/example/
+    2_transformation:
+      staging:
+        fakestoreapi:
+          +schema: FAKESTOREAPI
+          +database: TRANSFORMATION_STAGING
+    3_consumption:
+      machine_learning:
+        prepared_datasets:
+          +schema: PREPARED_DATASETS
+          +database: CONSUMPTION_MACHINE_LEARNING

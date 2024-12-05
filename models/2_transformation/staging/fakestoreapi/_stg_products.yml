@@ -1,0 +1,35 @@
+models:
+  - name: stg_products
+    columns:
+      - name: id
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: category
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: product_description
+        meta:
+          contains_pii: false
+          contains_user_generated_data: true
+      - name: product_image
+        meta:
+          contains_pii: false
+          contains_user_generated_data: true
+      - name: title
+        meta:
+          contains_pii: false
+          contains_user_generated_data: true
+      - name: rating_count
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: rating_rate
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
+      - name: price_usd
+        meta:
+          contains_pii: false
+          contains_user_generated_data: false
